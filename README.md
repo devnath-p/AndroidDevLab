@@ -81,3 +81,6 @@ private fun showLogAndToast(methodName: String) {
 ## Screenshots
 ![Screenshot 2026-07-29 225657.png](images/Screenshot%202026-07-29%20225657.png)
 ![Screenshot 2026-07-29 225715.png](images/Screenshot%202026-07-29%20225715.png)
+
+##videos
+[Screen Recording 2026-07-30 104017.mp4](videos/Screen%20Recording%202026-07-30%20104017.mp4)
