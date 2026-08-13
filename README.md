@@ -43,5 +43,12 @@ Exp4/
 
 ## Output
 
-![Application Output](screenshots/Screenshot1.png)
 ![Application Output](screenshots/Screenshot2.png)
+![Application Output](screenshots/Screenshot1.png)
+
+## Result
+
+- The app successfully passes the entered username from `MainActivity` to `WelcomeActivity` using an explicit Intent.
+- `WelcomeActivity` displays a personalized welcome message.
+
+
