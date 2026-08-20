@@ -6,6 +6,7 @@ import android.app.NotificationManager
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
@@ -20,16 +21,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Create notification channel
         createNotificationChannel()
 
-        val notificationButton = findViewById<android.widget.Button>(
+        // Find notification button
+        val notificationButton = findViewById<Button>(
             R.id.notificationButton
         )
 
+        // Show notification when button is clicked
         notificationButton.setOnClickListener {
             showNotification()
         }
 
+        // Request notification permission for Android 13+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             ActivityCompat.requestPermissions(
                 this,
@@ -46,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             val channel = NotificationChannel(
                 channelId,
                 "My Notifications",
-                NotificationManager.IMPORTANCE_DEFAULT
+                NotificationManager.IMPORTANCE_HIGH
             )
 
             channel.description = "Application notifications"
@@ -68,10 +73,11 @@ class MainActivity : AppCompatActivity() {
             .setSmallIcon(R.drawable.ic_launcher_foreground)
             .setContentTitle("Hello!")
             .setContentText("This is an Android notification.")
-            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setAutoCancel(true)
             .build()
 
+        // Check notification permission
         if (
             Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU ||
             ActivityCompat.checkSelfPermission(
@@ -79,6 +85,7 @@ class MainActivity : AppCompatActivity() {
                 Manifest.permission.POST_NOTIFICATIONS
             ) == PackageManager.PERMISSION_GRANTED
         ) {
+
             NotificationManagerCompat
                 .from(this)
                 .notify(notificationId, notification)
