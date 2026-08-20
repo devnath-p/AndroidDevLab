@@ -79,8 +79,7 @@ private fun showLogAndToast(methodName: String) {
 - **UI Toolkit**: XML Layouts / AppCompat
 
 ## Screenshots
-![Screenshot 2026-07-29 225657.png](images/Screenshot%202026-07-29%20225657.png)
-![Screenshot 2026-07-29 225715.png](images/Screenshot%202026-07-29%20225715.png)
 
-##videos
-[Screen Recording 2026-07-30 104017.mp4](videos/Screen%20Recording%202026-07-30%20104017.mp4)
+![Screenshot 2](images/Screenshot2.png)
+
+![Screenshot 1](images/Screenshot1.png)
