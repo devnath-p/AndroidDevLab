@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Credential Vault</string>
+    <string name="login_title">Account Login</string>
+    <string name="login_subtitle">Enter your credentials below. Saved details will auto-fill on app launch.</string>
+    <string name="username_label">Username or Email</string>
+    <string name="password_label">Password</string>
+    <string name="login_button">LOGIN</string>
+    <string name="logout_button">LOGOUT</string>
+    <string name="auto_fill_status">Credentials automatically restored from SQLite database</string>
+    <string name="login_success">Logged in successfully! Redirecting to Home&#8230;</string>
+    <string name="logout_success">Logged out. Stored credentials removed from SQLite database.</string>
+    <string name="error_empty_fields">Please enter both username and password.</string>
+    <string name="storage_info">Data Persistor: Key-Value storage via SQLite DB</string>
+    <string name="home_title">Home Dashboard</string>
+    <string name="welcome_user">Welcome, %1$s!</string>
+    <string name="home_subtitle">You are successfully logged in. Your credentials are saved in SQLite database.</string>
+    <string name="session_active_badge">Active Session Persistence Enabled</string>
+</resources>

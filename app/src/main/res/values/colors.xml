@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary_color">#1E88E5</color>
+    <color name="primary_dark">#1565C0</color>
+    <color name="accent_color">#00ACC1</color>
+    <color name="background_light">#F5F7FA</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="text_primary">#1F2937</color>
+    <color name="text_secondary">#6B7280</color>
+    <color name="logout_red">#D32F2F</color>
+    <color name="logout_red_bg">#FFEBEE</color>
+    <color name="auto_fill_badge">#E8F5E9</color>
+    <color name="auto_fill_text">#2E7D32</color>
+</resources>
