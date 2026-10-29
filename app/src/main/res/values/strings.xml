@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Exp11</string>
+    <string name="header_title">Fused Geolocation &amp; Embedded Map</string>
+    <string name="label_latitude">LATITUDE</string>
+    <string name="label_longitude">LONGITUDE</string>
+    <string name="label_accuracy">ACCURACY</string>
+    <string name="placeholder_coord">--.------</string>
+    <string name="placeholder_accuracy">-- m</string>
+    <string name="initial_status">Status: Tap \'Get Location\' to retrieve GPS coordinates.</string>
+    <string name="btn_get_location">Get Location</string>
+    <string name="btn_live_updates">Live Updates</string>
+    <string name="btn_stop_updates">Stop Updates</string>
+    <string name="map_placeholder">Map will display here once location is fetched</string>
+    <string name="status_permission_granted">Permission granted. Fetching location&#8230;</string>
+    <string name="status_permission_denied">Permission denied. Location access is required to render map.</string>
+    <string name="status_permission_denied_toast">Location permission denied</string>
+    <string name="status_acquiring_location">Acquiring GPS location&#8230;</string>
+    <string name="status_location_null">Unable to retrieve location. Please check if GPS is enabled.</string>
+    <string name="status_fetch_failed">Failed to fetch location: %1$s</string>
+    <string name="status_receiving_updates">Receiving real-time location updates&#8230;</string>
+    <string name="status_updates_stopped">Real-time updates stopped.</string>
+    <string name="status_updated_at">Updated at %1$s</string>
+</resources>
