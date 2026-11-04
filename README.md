@@ -121,9 +121,9 @@ The Geocoding API is used first to obtain the coordinates. The Weather API is th
 
 ## Output
 
-![Application Output](screenShots/Screenshot1.png)
+![Application Output](ScreenShots/Screenshot1.png)
 
-![Application Output](screenShots/Screenshot2.png)
+![Application Output](ScreenShots/Screenshot2.png)
 
 ## Result
 
