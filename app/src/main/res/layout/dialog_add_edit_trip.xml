@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tvDialogHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add New Trip"
+        android:textColor="@color/text_primary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/tvLocationSubtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Location: 0.0, 0.0"
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Title Field -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Trip Title"
+        app:startIconDrawable="@drawable/ic_trip_list"
+        android:layout_marginBottom="12dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTripTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:maxLines="1"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Date Field -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date (DD-MM-YYYY)"
+        app:startIconDrawable="@drawable/ic_calendar"
+        android:layout_marginBottom="12dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTripDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:maxLines="1"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Notes Field -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Trip Notes / Memories"
+        app:startIconDrawable="@drawable/ic_edit"
+        android:layout_marginBottom="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTripNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:gravity="top"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

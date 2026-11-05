@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="20dp">
+
+    <!-- Header & Title -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvDetailsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Trip Details"
+                android:textColor="@color/text_primary"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvDetailsDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date: --"
+                android:textColor="@color/accent"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="2dp"/>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnCloseDetails"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_close"
+            app:tint="@color/text_secondary"
+            android:contentDescription="Close"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Location & Notes Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="@color/bg_light"
+        app:cardElevation="0dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/divider">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- Location -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_location"
+                    app:tint="@color/accent"/>
+
+                <TextView
+                    android:id="@+id/tvDetailsLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location: 0.0, 0.0"
+                    android:textColor="@color/text_primary"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="6dp"/>
+
+            </LinearLayout>
+
+            <!-- Notes -->
+            <TextView
+                android:id="@+id/tvDetailsNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notes: --"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Photo Gallery Header Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/tvGalleryHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Photo Gallery"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddPhotos"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="+ Add Photos"
+            android:textSize="12sp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            app:cornerRadius="18dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"/>
+
+    </LinearLayout>
+
+    <!-- Photo Gallery Grid/List Scroll Container -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:id="@+id/photoGalleryContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"/>
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/tvNoPhotosHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No photos added yet. Tap '+ Add Photos' above!"
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@drawable/ic_launcher_background"
+        android:visibility="gone"/>
+
+    <!-- Bottom Actions -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEditTrip"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Edit Trip"
+            app:icon="@drawable/ic_edit"
+            app:iconSize="18dp"
+            app:cornerRadius="10dp"
+            android:layout_marginEnd="6dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDoneDetails"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Done"
+            app:cornerRadius="10dp"
+            android:layout_marginStart="6dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
